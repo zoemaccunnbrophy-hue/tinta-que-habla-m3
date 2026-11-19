@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tinta que Habla | Arte, Piel e Historia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="#inicio" class="logo nav-trigger" data-target="all">TINTA QUE HABLA<span class="dot">.</span></a>
+        
+        <button class="menu-toggle" aria-label="Abrir menú de navegación" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#inicio" class="nav-trigger active" data-target="all">Inicio</a></li>
+                <li><a href="#definicion" class="nav-trigger" data-target="definicion">El Concepto</a></li>
+                <li><a href="#estilos" class="nav-trigger" data-target="estilos">Estilos</a></li>
+                <li><a href="#galeria" class="nav-trigger" data-target="galeria">Galería</a></li>
+                <li><a href="#cuidados" class="nav-trigger" data-target="cuidados">Cuidados</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO (Se muestra en Inicio / Vista General) -->
+    <section id="inicio" class="hero view-section" data-section="inicio">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="subtitle">CULTURA • ARTE • IDENTIDAD</span>
+            <h1>CADA TRAZO CUENTA UNA HISTORIA</h1>
+            <p>Más que un dibujo bajo la piel, un arte que cuenta una historia.</p>
+            <a href="#estilos" class="btn-primary nav-trigger" data-target="estilos">Explorar Estilos</a>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 1: EL CONCEPTO -->
+    <section id="definicion" class="container section-padding view-section" data-section="definicion">
+        <div class="dictionary-card">
+            <div class="dict-header">
+                <span class="tag">DEFINICIÓN</span>
+                <h2>Ta·tu·a·je</h2>
+                <span class="phonetic">/taˈtwaxe/ — sustantivo masculino</span>
+            </div>
+            <div class="dict-body">
+                <p><strong>1.</strong> Grabado permanente en la piel humana mediante la inserción de pigmentos a través de punciones.</p>
+                <p><strong>2.</strong> Lenguaje visual sin palabras; marca de pertenencia, memoria, rebeldía y expresión artística que transforma el cuerpo en un lienzo vivo.</p>
+            </div>
+        </div>
+
+        <div class="purpose-banner" style="margin-top: 40px;">
+            <span class="tag">SOBRE ESTE ESPACIO</span>
+            <h3>UNA GUÍA PARA CONOCER, ELEGIR Y CUIDAR TU TINTA</h3>
+            <p>Esta es una plataforma informativa pensada para acompañarte en todo el proceso: desde explorar distintos lenguajes visuales hasta encontrar tu estilo ideal y aprender los cuidados esenciales para mantener cada pieza intacta en la piel.</p>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 2: ESTILOS -->
+    <section id="estilos" class="container section-padding view-section" data-section="estilos">
+        <div class="section-header">
+            <span class="tag">DIFERENTES ESTILOS</span>
+            <h2>LENGUAJES DE LA TINTA</h2>
+            <div class="divider"></div>
+        </div>
+
+        <!-- Filtros interactivos de estilos -->
+        <div class="filter-bar" role="tablist" aria-label="Filtrar estilos de tatuaje">
+            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="blackwork">Blackwork</button>
+            <button class="filter-btn" data-filter="simbolismo">Simbolismo</button>
+            <button class="filter-btn" data-filter="fineline">Fine Line</button>
+            <button class="filter-btn" data-filter="neotradicional">Neotradicional</button>
+        </div>
+
+        <div class="styles-grid">
+            <article class="style-card" data-category="blackwork">
+                <div class="card-img">
+                    <img src="img/blackwork.jpg" alt="Tatuaje Blackwork">
+                </div>
+                <div class="card-info">
+                    <span class="number">01</span>
+                    <h3>Blackwork</h3>
+                    <p>Uso exclusivo de tinta negra sólida, contrastes profundos, geometría sagrada y texturas de grabado antiguo.</p>
+                </div>
+            </article>
+
+            <article class="style-card" data-category="simbolismo">
+                <div class="card-img">
+                    <img src="img/simbolismos.jpg" alt="Tatuaje de Simbolismo">
+                </div>
+                <div class="card-info">
+                    <span class="number">02</span>
+                    <h3>Simbolismo</h3>
+                    <p>Iconografía cargada de significado personal, amuletos, talismanes y metáforas visuales grabadas como memoria en la piel.</p>
+                </div>
+            </article>
+
+            <article class="style-card" data-category="fineline">
+                <div class="card-img">
+                    <img src="img/fineline.jpg" alt="Tatuaje Fineline">
+                </div>
+                <div class="card-info">
+                    <span class="number">03</span>
+                    <h3>Fine Line</h3>
+                    <p>Precisión quirúrgica con agujas de una sola punta. Trazos sutiles, minimalismo, botánica y detalles delicados.</p>
+                </div>
+            </article>
+
+            <article class="style-card" data-category="neotradicional">
+                <div class="card-img">
+                    <img src="img/neotradicional.jpg" alt="Tatuaje Neotradicional">
+                </div>
+                <div class="card-info">
+                    <span class="number">04</span>
+                    <h3>Neotradicional</h3>
+                    <p>La evolución ilustrativa del tradicional: variación en el grosor de línea, sombreados complejos y estética Art Nouveau.</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 3: GALERÍA -->
+    <section id="galeria" class="gallery-section section-padding view-section" data-section="galeria">
+        <div class="container">
+            <div class="section-header">
+                <span class="tag">ARCHIVO VISUAL</span>
+                <h2>GALERÍA DE INSPIRACIÓN</h2>
+                <div class="divider"></div>
+                <p class="gallery-hint">Hacé clic en cualquier fotografía para ampliarla</p>
+            </div>
+
+            <div class="masonry-grid">
+                <div class="gallery-item item-tall" data-caption="El ritual de la aguja — Precisión y concentración en sesión">
+                    <img src="img/galeria1.jpg" alt="Proceso de tatuaje">
+                    <div class="gallery-caption">El ritual de la aguja</div>
+                </div>
+                <div class="gallery-item" data-caption="Bocetos & Flash — Diseño previo antes de pasar a la piel">
+                    <img src="img/galeria2.jpg" alt="Diseño flash">
+                    <div class="gallery-caption">Bocetos & Flash</div>
+                </div>
+                <div class="gallery-item" data-caption="Sombras y contraste — Volumen y textura en tinta negra">
+                    <img src="img/galeria3.jpg" alt="Arte en piel">
+                    <div class="gallery-caption">Sombras y contraste</div>
+                </div>
+                <div class="gallery-item item-wide" data-caption="El estudio como taller — Espacio creativo e higiene profesional">
+                    <img src="img/galeria4.jpg" alt="Estudio de tatuajes">
+                    <div class="gallery-caption">El estudio como taller</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 4: CUIDADOS -->
+    <section id="cuidados" class="container section-padding view-section" data-section="cuidados">
+        <div class="section-header">
+            <span class="tag">GUÍA ESENCIAL</span>
+            <h2>CUIDADO DEL TATUAJE</h2>
+            <div class="divider"></div>
+        </div>
+        <div class="care-grid">
+            <div class="care-step">
+                <h4>I. Higiene</h4>
+                <p>Lavar suavemente con jabón neutro y agua tibia tres veces al día durante las primeras semanas.</p>
+                <label class="care-check">
+                    <input type="checkbox"> <span>Paso completado hoy</span>
+                </label>
+            </div>
+            <div class="care-step">
+                <h4>II. Hidratación</h4>
+                <p>Aplicar capas muy finas de crema cicatrizante sin perfume para mantener la piel elástica.</p>
+                <label class="care-check">
+                    <input type="checkbox"> <span>Paso completado hoy</span>
+                </label>
+            </div>
+            <div class="care-step">
+                <h4>III. Protección</h4>
+                <p>Evitar la exposición directa al sol, piletas y no arrancar las costras durante el proceso.</p>
+                <label class="care-check">
+                    <input type="checkbox"> <span>Paso completado hoy</span>
+                </label>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIGHTBOX MODAL PARA GALERÍA -->
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+        <button class="lightbox-close" aria-label="Cerrar imagen">&times;</button>
+        <img id="lightbox-img" src="" alt="">
+        <p id="lightbox-caption"></p>
+    </div>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="logo">TINTA QUE HABLA<span class="dot">.</span></div>
+            <p>CONTENIDOS Y CREATIVIDAD I — 2026 | ZOE MAC CUNN BROPHY</p>
+        </div>
+    </footer>
+
+    <script>
+        // 1. NAVEGACIÓN INTERACTIVA POR SECCIÓN (BOTONES DE ARRIBA)
+        const navTriggers = document.querySelectorAll('.nav-trigger');
+        const sections = document.querySelectorAll('.view-section');
+        const navLinksList = document.querySelector('.nav-links');
+        const menuToggle = document.querySelector('.menu-toggle');
+
+        function activateView(target) {
+            // Actualizar estado activo en enlaces del menú
+            navTriggers.forEach(link => {
+                if (link.closest('.nav-links')) {
+                    link.classList.toggle('active', link.dataset.target === target);
+                }
+            });
+
+            // Mostrar todas las secciones (Inicio) o aislar la sección elegida
+            sections.forEach(sec => {
+                const secName = sec.dataset.section;
+                if (target === 'all') {
+                    sec.classList.remove('section-hidden');
+                    sec.classList.remove('single-view-mode');
+                } else {
+                    if (secName === target) {
+                        sec.classList.remove('section-hidden');
+                        sec.classList.add('single-view-mode');
+                    } else {
+                        sec.classList.add('section-hidden');
+                        sec.classList.remove('single-view-mode');
+                    }
+                }
+            });
+
+            // Cerrar menú móvil si estaba abierto y subir suavemente al inicio
+            navLinksList.classList.remove('open');
+            menuToggle.setAttribute('aria-expanded', 'false');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        navTriggers.forEach(trigger => {
+            trigger.addEventListener('click', (e) => {
+                e.preventDefault();
+                const target = trigger.dataset.target;
+                activateView(target);
+            });
+        });
+
+        // Menú hamburguesa para celulares (9:16)
+        menuToggle.addEventListener('click', () => {
+            const isOpen = navLinksList.classList.toggle('open');
+            menuToggle.setAttribute('aria-expanded', isOpen);
+        });
+
+        // 2. FILTRO INTERACTIVO EN SECCIÓN ESTILOS
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const styleCards = document.querySelectorAll('.style-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const filter = btn.dataset.filter;
+
+                styleCards.forEach(card => {
+                    if (filter === 'all' || card.dataset.category === filter) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // 3. LIGHTBOX INTERACTIVO EN GALERÍA
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxCaption = document.getElementById('lightbox-caption');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        galleryItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const img = item.querySelector('img');
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
+                lightboxCaption.textContent = item.dataset.caption;
+                lightbox.classList.add('open');
+                lightbox.setAttribute('aria-hidden', 'false');
+            });
+        });
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target !== lightboxImg) {
+                lightbox.classList.remove('open');
+                lightbox.setAttribute('aria-hidden', 'true');
+            }
+        });
+    </script>
+</body>
+</html>
