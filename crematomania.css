@@ -1,0 +1,423 @@
+:root {
+    --bg-ice: #E3E8EC;
+    --bg-white: #FFFFFF;
+    --text-ink: #1A1D20;
+    --text-muted: #525B63;
+    --gold-accent: #C59B27;
+    --gold-dark: #9E7B1B;
+    --border-light: rgba(26, 29, 32, 0.1);
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-ice);
+    color: var(--text-ink);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 28px;
+}
+
+.hidden-block {
+    display: none !important;
+}
+
+.isolated-block {
+    padding-top: 140px !important;
+    min-height: calc(100vh - 180px);
+    animation: fadeSlide 0.35s ease forwards;
+}
+
+@keyframes fadeSlide {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* NAVBAR */
+.cremato-navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 22px 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(227, 232, 236, 0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-light);
+    z-index: 1000;
+}
+
+.cremato-logo {
+    font-family: var(--font-sans);
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    color: var(--text-ink);
+    text-decoration: none;
+}
+
+.cremato-links {
+    list-style: none;
+    display: flex;
+    gap: 36px;
+}
+
+.cremato-links a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.25s ease;
+}
+
+.cremato-links a:hover,
+.cremato-links a.active {
+    color: var(--text-ink);
+    border-bottom-color: var(--gold-accent);
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    width: 24px;
+    height: 2px;
+    background: var(--text-ink);
+}
+
+/* HERO */
+.cremato-hero {
+    min-height: 92vh;
+    padding: 130px 0 60px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero-text h1 {
+    font-family: var(--font-serif);
+    font-size: clamp(3rem, 5.5vw, 5rem);
+    font-weight: 600;
+    line-height: 1.05;
+    letter-spacing: 1px;
+    color: var(--text-ink);
+    margin-bottom: 24px;
+}
+
+.hero-text p {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    max-width: 360px;
+    margin-bottom: 32px;
+}
+
+.btn-dark {
+    display: inline-block;
+    padding: 13px 30px;
+    background: var(--text-ink);
+    color: var(--bg-white);
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    border: 1px solid var(--text-ink);
+    transition: all 0.3s ease;
+}
+
+.btn-dark:hover {
+    background: transparent;
+    color: var(--text-ink);
+}
+
+.hero-visual {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.hero-visual img {
+    width: 100%;
+    max-width: 440px;
+    max-height: 540px;
+    object-fit: contain;
+}
+
+/* SECCIONES */
+.cremato-section {
+    padding: 96px 0;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.section-title-block {
+    max-width: 760px;
+    margin-bottom: 48px;
+}
+
+.section-title-block h2 {
+    font-family: var(--font-serif);
+    font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+    font-weight: 600;
+    line-height: 1.08;
+    color: var(--text-ink);
+    margin-bottom: 18px;
+}
+
+.section-title-block p {
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.65;
+}
+
+/* TARJETAS BLANCAS (OBSESIÓN & IMPACTO) */
+.cards-three-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.white-card {
+    background: var(--bg-white);
+    padding: 40px 32px;
+    box-shadow: 0 12px 28px rgba(26, 29, 32, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    transition: transform 0.3s ease;
+}
+
+.white-card:hover {
+    transform: translateY(-5px);
+}
+
+.white-card h3 {
+    font-size: 0.92rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: var(--text-ink);
+    margin-bottom: 14px;
+}
+
+.white-card p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+.stat-card {
+    padding-top: 48px;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--gold-accent);
+    margin-bottom: 14px;
+    letter-spacing: -0.5px;
+}
+
+/* GALERÍA VISUAL */
+.gallery-three-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    align-items: start;
+}
+
+.editorial-piece {
+    background: var(--bg-white);
+    padding: 18px;
+    box-shadow: 0 12px 28px rgba(26, 29, 32, 0.06);
+}
+
+.piece-frame {
+    width: 100%;
+    aspect-ratio: 4 / 4.5;
+    overflow: hidden;
+    background: #F4F6F8;
+}
+
+.piece-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.editorial-piece:hover .piece-frame img {
+    transform: scale(1.04);
+}
+
+.editorial-piece figcaption {
+    padding-top: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.editorial-piece strong {
+    font-size: 0.82rem;
+    letter-spacing: 1px;
+    color: var(--text-ink);
+}
+
+.editorial-piece span {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+}
+
+/* FOOTER Y RETORNO A TINTA QUE HABLA */
+.cremato-footer {
+    margin-top: auto;
+    padding: 64px 0 44px;
+    background: #D8DFE4;
+}
+
+.return-banner {
+    background: #121212;
+    color: #F2EFE9;
+    padding: 36px 32px;
+    text-align: center;
+    border-left: 4px solid #B81D24;
+    margin-bottom: 36px;
+}
+
+.mini-tag {
+    display: block;
+    font-size: 0.72rem;
+    letter-spacing: 3px;
+    color: #B81D24;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.return-banner h3 {
+    font-family: var(--font-serif);
+    font-size: 1.7rem;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.return-banner p {
+    color: #A6A199;
+    font-size: 0.92rem;
+    max-width: 560px;
+    margin: 0 auto 22px;
+}
+
+.btn-return {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #B81D24;
+    color: #F2EFE9;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: background 0.3s ease;
+}
+
+.btn-return:hover {
+    background: #D9232B;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    color: var(--text-muted);
+    font-size: 0.82rem;
+}
+
+/* RESPONSIVE (CLASE 06) */
+@media (max-width: 960px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .hero-text p {
+        margin: 0 auto 28px;
+    }
+    .cards-three-grid,
+    .gallery-three-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .cremato-navbar {
+        padding: 18px 24px;
+    }
+    .menu-toggle {
+        display: flex;
+    }
+    .cremato-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background: var(--bg-ice);
+        padding: 20px 24px;
+        gap: 16px;
+        border-bottom: 1px solid var(--border-light);
+    }
+    .cremato-links.open {
+        display: flex;
+    }
+}
+
+.cremato-ig-link {
+    color: var(--text-ink);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.82rem;
+    letter-spacing: 1px;
+    border-bottom: 1.5px solid var(--gold-accent);
+    padding-bottom: 2px;
+    transition: color 0.25s ease;
+}
+
+.cremato-ig-link:hover {
+    color: var(--gold-dark);
+}
